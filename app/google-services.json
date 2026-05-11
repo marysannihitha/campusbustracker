@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "139748921946",
+    "project_id": "campusbustracker-982de",
+    "storage_bucket": "campusbustracker-982de.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139748921946:android:7be36c06778aeba7b1be63",
+        "android_client_info": {
+          "package_name": "com.example.campusbustracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBS2X8vJqUBdMQjtOV-YnnpcyGI3m3LrNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

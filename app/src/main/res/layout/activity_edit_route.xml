@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="#16A34A"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="32dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back_g"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Add Routes"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="22sp"/>
+
+    </RelativeLayout>
+
+
+
+    <!-- FORM CONTAINER -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/formCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-22dp"
+        app:cardCornerRadius="26dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+
+
+                <!-- ROUTE ID -->
+                <TextView
+                    android:id="@+id/routeIdTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Route ID"
+                    android:textColor="#111111"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="14dp"
+                    app:cardCornerRadius="24dp"
+                    app:cardBackgroundColor="#E8F5EC">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingStart="14dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/green_circle_bg"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_bus"
+                            android:scaleType="centerInside"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" RTE - 001"
+                            android:textColor="#16A34A"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginStart="8dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <!-- ROUTE NAME -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Route Name"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="26dp"/>
+
+                <EditText
+                    android:id="@+id/routeNameEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Enter route name"
+                    android:paddingStart="18dp"
+                    android:background="@drawable/input_bg"/>
+
+
+
+                <!-- START -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start Location"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="22dp"/>
+
+                <EditText
+                    android:id="@+id/startEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Enter start location"
+                    android:paddingStart="18dp"
+                    android:background="@drawable/input_bg"/>
+
+
+
+                <!-- END -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End Location"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="22dp"/>
+
+                <EditText
+                    android:id="@+id/endEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Enter end location"
+                    android:paddingStart="18dp"
+                    android:background="@drawable/input_bg"/>
+
+
+
+                <!-- STOPS -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stops"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="22dp"/>
+
+                <LinearLayout
+                    android:id="@+id/stopContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <!-- ADD STOP -->
+                <TextView
+                    android:id="@+id/addStopBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center"
+                    android:text="Add Another Stop"
+                    android:textColor="#16A34A"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:background="@drawable/add_stop_border"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+
+
+                <!-- TIME -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Departure Time"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="22dp"/>
+
+                <EditText
+                    android:id="@+id/departureEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Select departure time"
+                    android:paddingStart="18dp"
+                    android:background="@drawable/input_bg"/>
+
+
+<!--                End Time-->
+                <!-- TIME -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arrival Time"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="22dp"/>
+
+                <EditText
+                    android:id="@+id/arrivalEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Select arrival time"
+                    android:paddingStart="18dp"
+                    android:background="@drawable/input_bg"/>
+
+
+
+                <!-- BUS -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bus Number"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="22dp"/>
+
+                <EditText
+                    android:id="@+id/busNumberEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Enter bus number"
+                    android:paddingStart="18dp"
+                    android:background="@drawable/input_bg"/>
+
+
+
+                <!-- SUBMIT -->
+                <Button
+                    android:id="@+id/addRouteBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Add Route"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:backgroundTint="#16A34A"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <!-- FOOTER -->
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer_layout"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

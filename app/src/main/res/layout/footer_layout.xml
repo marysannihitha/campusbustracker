@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/footerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/homeBtn"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_home"/>
+
+    <ImageView
+        android:id="@+id/mapBtn"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_map"/>
+
+    <ImageView
+        android:id="@+id/routesBtn"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_routes"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/alertsBtn"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_alert"/>
+
+    <ImageView
+        android:id="@+id/profileBtn"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_profile"/>
+
+</LinearLayout>

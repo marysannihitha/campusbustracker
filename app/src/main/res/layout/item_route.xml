@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="104dp"
+    android:layout_marginBottom="14dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="14dp">
+
+
+        <!-- ROUTE ID -->
+        <TextView
+            android:id="@+id/routeId"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:text="R1"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:background="@drawable/purple_circle_bg"/>
+
+
+
+        <!-- ROUTE TITLE -->
+        <TextView
+            android:id="@+id/routeTitle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/routeId"
+            android:layout_marginStart="12dp"
+            android:text="Anna Nagar - T. Nagar"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#111111"
+            android:maxLines="1"/>
+
+
+
+        <!-- ACTIVE -->
+        <TextView
+            android:id="@+id/statusTxt"
+            android:layout_width="56dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:text="Active"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#00A650"
+            android:background="#DFF7E8"/>
+
+
+
+        <!-- ROUTE PATH -->
+        <TextView
+            android:id="@+id/routePath"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/routeTitle"
+            android:layout_toEndOf="@id/routeId"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:text="Anna Nagar Tower → T. Nagar"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:maxLines="1"/>
+
+
+
+        <!-- ROUTE INFO -->
+        <TextView
+            android:id="@+id/routeInfo"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/routeId"
+            android:layout_marginStart="12dp"
+            android:text="12 Stops     18.4 km     45 mins"
+            android:textSize="11sp"
+            android:textColor="#777777"/>
+
+
+
+        <!-- ARROW -->
+        <ImageView
+            android:id="@+id/arrowBtn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="arrow"
+            android:src="@drawable/ic_arrow_right"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

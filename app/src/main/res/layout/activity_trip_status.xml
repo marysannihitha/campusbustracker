@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="18dp">
+
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back_g"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Status"
+            android:textColor="#111111"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+    <!-- STATUS CARD -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trip Status"
+                android:textSize="14sp"
+                android:textColor="#111111"
+                android:textStyle="bold"/>
+
+
+            <RadioGroup
+                android:id="@+id/statusGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <RadioButton
+                    android:id="@+id/onTimeRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="On Time"
+                    android:textColor="#111111"
+                    android:textSize="16sp"
+                    android:buttonTint="#16A34A"/>
+
+                <RadioButton
+                    android:id="@+id/delayedRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Delayed"
+                    android:textColor="#111111"
+                    android:textSize="16sp"
+                    android:buttonTint="#16A34A"/>
+
+                <RadioButton
+                    android:id="@+id/breakdownRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Breakdown"
+                    android:textColor="#111111"
+                    android:textSize="16sp"
+                    android:buttonTint="#16A34A"/>
+
+                <RadioButton
+                    android:id="@+id/trafficRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Traffic"
+                    android:textColor="#111111"
+                    android:textSize="16sp"
+                    android:buttonTint="#16A34A"/>
+
+                <RadioButton
+                    android:id="@+id/otherRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Other"
+                    android:textColor="#111111"
+                    android:textSize="16sp"
+                    android:buttonTint="#16A34A"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- NOTE TITLE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="Add Note (Optional)"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#111111"/>
+
+
+    <!-- NOTE BOX -->
+    <!-- NOTE BOX -->
+    <EditText
+        android:id="@+id/noteEdt"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_bg"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:hint="e.g. Heavy traffic near city mall"
+        android:textColorHint="#9CA3AF"
+        android:textColor="#111111"
+        android:textSize="14sp"
+        android:singleLine="true"/>
+
+
+    <!-- BUTTON -->
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
+        android:text="Update Status"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/trip_btn_green" />
+
+</LinearLayout>
